@@ -3,11 +3,11 @@
 //classe
 
 class Personagem {
-    nome: string = '';
-    energia:number = 0;
-    vida:number = 0;
-    ataque:number = 0;
-    defesa:number = 0;
+    nome: string = ''
+    energia: number = 0
+    vida: number = 0
+    ataque: number = 0
+    defesa: number = 0
 }
 
 let sansa: Personagem

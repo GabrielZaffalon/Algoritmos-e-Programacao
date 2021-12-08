@@ -44,13 +44,33 @@ console.log('Soma menores de 20:', sumMinors20)
 console.log('----------------------------------------')
 //TODO: Incrementa em 1 o purchaseDaysAgo de todos objetos
 
-const addPurchase = clients.map((value) => value.purchaseDaysAgo + 1)
-console.log('Pouchase Days Ago + 1:', addPurchase)
+let newClients = clients.map((v) => ({ ...v }))
+
+newClients = newClients.map((value) => {
+    value.purchaseDaysAgo += 1
+    return value
+})
+
+console.log('newClients :', newClients)
 
 //TODO: Verifica se um determinado número de entrada está contigo no array
 
+console.log('ages.includes(19) :', ages.includes(18))
+console.log(
+    'ages.find(18) :',
+    ages.find((v) => v === 19)
+)
+
 //TODO: Altera array para ficar só com o primeiro nome dos clientes
 
+let nameClients = clients.map((value) => value.name.split(' ')[0])
+console.log('nameClients :', nameClients)
+
 //TODO: Incrementa a idade apenas dos clientes das posições ímpares do array
+
+clients.filter((value, index) =>
+    index % 2 === 0 ? (value.birth += 1) : value.birth
+)
+console.log('xxx', clients)
 
 //TODO: Retorna todos as pessoas de sexo masculino
