@@ -11,18 +11,22 @@ export class ContaEspecial extends ContaBancaria {
         this.limite = limite
     }
 
+    public set tipo(tipo: string) {
+        this.tipo = tipo
+    }
+
     public valorDisponível(): string {
         return `Seu saldo atual é de R$ ${this.saldo}\n`
     }
 
     public valorLimite(): string {
-        return `Seu saldo atual é de R$ ${this._limite}\n`
+        return `Seu limite atual é de R$ ${this._limite}\n`
     }
 
-    public saque(quantidade: number): string {
+    public saque(quantidade: number, valLimite: number): string {
         if (quantidade > +this.saldo) {
             return `Saldo insuficiente\n`
-        } else if (quantidade > +this._limite) {
+        } else if (valLimite >= +this._limite) {
             return `Limites excedidos, saque não autorizado\n`
         } else {
             this.saldo -= quantidade

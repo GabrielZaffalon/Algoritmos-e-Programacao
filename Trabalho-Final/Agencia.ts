@@ -1,6 +1,4 @@
 import { ContaBancaria } from './ContaBancaria'
-//import { ContaEspecial } from './ContaEspecial';
-//let banco: ContaBancaria = new ContaBancaria('nome', 111, 222)
 let contasBancarias: ContaBancaria[] = []
 export class agencia {
     constructor(protected _codigo: number) {}
