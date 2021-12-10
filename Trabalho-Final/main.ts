@@ -46,6 +46,8 @@ function account() {
                 console.log()
 
                 list()
+
+                console.log()
                 const escolha = +teclado('Qual conta vai utilizar: ', '\n')
                 conta = pessoas[escolha + 1]
                 menu()
